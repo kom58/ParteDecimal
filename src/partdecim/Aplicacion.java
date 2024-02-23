@@ -6,30 +6,17 @@ import java.awt.event.ActionListener;
 
 public class Aplicacion {
     private JPanel panBase;
-    private JPanel pasSuperior;
-    private JPanel pasMedio;
-    private JPanel pasInferior;
     private JButton btnCalcular;
     private JButton btnSalir;
-    private JLabel txtTitulo;
-    private JLabel titNumero;
     private JTextField datNumero;
     private JLabel txtResultado;
 
 
     public Aplicacion() {
-        btnCalcular.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                
-                miraDecimal();
-            }
-        });
-        btnSalir.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
 
-                System.exit(0);
-            }
-        });
+        btnCalcular.addActionListener(e -> miraDecimal());
+        btnSalir.addActionListener(e -> System.exit(0));
+        datNumero.addActionListener(e -> miraDecimal());
     }
 
 
